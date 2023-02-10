@@ -1,5 +1,22 @@
 var target=document.getElementById("main");
 target.style.display="flex";
+var now=new Date();
+var day=now.getDay();
+var month=now.getMonth();
+document.getElementById("showdate").innerHTML=now.getDate();
+var arrDay=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var arrMonth=["January","February","March","April","May","Janu","July","August","September","October","November","December"]
+arrDay.forEach(function(z,index){
+    if(day==index){
+        document.getElementById("showday").innerHTML=z;
+    }
+});
+arrMonth.forEach(function(y,index){
+    if(month==index){
+        document.getElementById("showmonth").innerHTML=y;
+    }
+})
+document.getElementById("showyear").innerHTML=now.getFullYear();
 fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/make-your-trip-package.json").then(x=>x.json())
 .then((result)=>{
     console.log(result);

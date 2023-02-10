@@ -106,3 +106,31 @@ body{
 .totalpriceshow{
     color:rgb(170, 170, 170);
 }
+
+#header{
+    display: flex;
+    justify-content: center;
+}
+
+#usedaymonth {
+    margin-left: 1%;
+    margin-top: 0.7%;
+}
+#usedaymonth>p{
+    margin: 0;
+    color:grey
+}
+
+#header>p{
+    margin:0;
+}
+
+#showdate{
+    margin-right:5px ;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#showday{
+    font-weight: bold;
+}
