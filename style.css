@@ -1,0 +1,108 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+#main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:30px
+}
+
+.cityname{
+   border: 0px;
+   background-color: white;
+   color:black;
+   text-overflow: ellipsis;
+   font-weight: bold;
+   width: 76%;
+   font-size: 1.3em;
+}
+
+/* .cardname{
+    width:400px;
+    aspect-ratio: 1/0.5;
+    border: 1px solid black;
+    margin:20px;
+} */
+
+.cardname {
+    width: 379px;
+    aspect-ratio: 1/0.5;
+    background-color:white;
+    border-radius: 5%;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 13px 1px #a8a8a8;
+}
+
+.apidate{
+    border: 0px;
+    background-color: white;
+    color:black;
+    text-overflow: ellipsis;
+ }
+
+ .category{
+    border: 0px;
+    background-color: white;
+    color:black;
+    text-overflow: ellipsis;
+    color:grey
+ }
+
+ .showncardcityname{
+    display: flex;
+    flex-direction: column;
+ }
+
+/* .cityimg{
+    width:400px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px;
+} */
+
+.cityimg {
+    width: 100%;
+    object-fit: cover;
+    /* margin: 20px; */
+    border-radius: 15px;
+    aspect-ratio: 1/0.7;
+}
+
+.imagespecial {
+    width: auto;
+}
+
+.showprice{
+    display: inline-block;
+    padding: 10px;
+}
+
+.more{
+    float:right;
+    padding:10px;
+    margin:10px;
+    border-radius: 6px;
+    background-color:white;
+    border-color: grey;
+}
+
+.more:hover{
+    border-color: #000000;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.totalprice{
+    display:inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.totalpriceshow{
+    color:rgb(170, 170, 170);
+}
