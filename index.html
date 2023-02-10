@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Assignment-3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="header">
@@ -14,6 +15,16 @@
             <span id="showday"></span><br>
             <p><span id="showmonth"></span>,<span id="showyear"></span></p>
         </div>
+        <div id="howday">
+            <lable for="newone">How many days?</lable>
+            <span><input list="optiontosee" id="newone" placeholder="Select Days"></span>
+            <datalist id="optiontosee"><option value="one day"><option value="two day"><option value="three week"><option value="one week"></datalist>
+        </div>
+        <div id="dateselect">
+            <span>Select Date</span>
+            <span><input type="Date"></span>
+        </div>
+        <div id="gobutton"><button><i class="fa-solid fa-magnifying-glass"></i>Go!</button></div>
         <div id="apiweather">
         </div>
     </div>
