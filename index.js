@@ -16,12 +16,21 @@ arrDay.forEach(function(z,index){
         document.getElementById("showday").innerHTML=z;
     }
 });
+
+
 arrMonth.forEach(function(y,index){
     if(month==index){
         document.getElementById("showmonth").innerHTML=y;
     }
 })
 document.getElementById("showyear").innerHTML=now.getFullYear();
+function load(){
+    
+}
+
+window.onload=load;
+
+
 fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/make-your-trip-package.json").then(x=>x.json())
 .then((result)=>{
     console.log(result);
@@ -36,20 +45,15 @@ fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/make-you
 
 
 //<div><div class="totalprice"><span class="price">Total Price:</span><div class="showprice">${x.price}</div></div><button class="exmore">Explore</button></div>
+
 var citylist=[];
 fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/india-popular-city.json").then(res=>res.json()).then(respod=>{
-    respod.city.forEach(function(z){
+respod.city.forEach(function(z){
         citylist.push(z.name);
-    })
-    optionadd(citylist);
+})
+
+optionadd(citylist);
 }).catch(err=>console.log(err));
-
-
-console.log(citylist);
-
-
-
-
 
 
 function optionadd(arrcityname){
@@ -58,6 +62,11 @@ function optionadd(arrcityname){
         datalist.insertAdjacentHTML("beforeend",datalistchild);
     }
 }
+
+var city=inputcity.value;
+var api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9a2ecb08a03c4efc56a4050642bd1279`
+
+showingtemp(api,city);
 
 function mytemp(d){
     var city=d.value;
@@ -77,4 +86,6 @@ function showingtemp(api,city){
     }).catch(errr=>console.log(errr));
     
 }
+
+
 
