@@ -10,27 +10,31 @@
 </head>
 <body>
     <div id="header">
-        <p id="showdate"></p>
-        <div id="usedaymonth">
-            <span id="showday"></span><br>
-            <p><span id="showmonth"></span>,<span id="showyear"></span></p>
+        <div id="one">
+            <p id="showdate"></p>
+            <div id="usedaymonth">
+                <span id="showday"></span><br>
+                <p><span id="showmonth"></span>,<span id="showyear"></span></p>
+            </div>
         </div>
-        <div id="showcitylist">
-            <lable for="cities">Select Place</lable>
-            <span><input list="citysee" value="ahmedabad" id="cities" placeholder="All Places"  onchange=mytemp(this)></span>
-            <datalist id="citysee"></datalist>
-        </div>
-        <div id="howday">
-            <lable for="newone">How many days?</lable>
-            <span><input list="optiontosee" id="newone" placeholder="Select Days"></span>
-            <datalist id="optiontosee"><option value="one day"><option value="two day"><option value="three week"><option value="one week"></datalist>
-        </div>
-        <div id="dateselect">
-            <span>Select Date</span>
-            <span><input type="Date"></span>
-        </div>
-        <div id="gobutton"><button><i class="fa-solid fa-magnifying-glass"></i>Go!</button></div>
-        <div id="apiweather">
+        <div id="two" style="display:flex">
+            <div id="showcitylist">
+                <lable for="cities">Select Place</lable>
+                <span><input list="citysee" value="ahmedabad" id="cities" placeholder="All Places"  onchange=mytemp(this)></span>
+                <datalist id="citysee"></datalist>
+            </div>
+            <div id="howday">
+                <lable for="newone">How many days?</lable>
+                <span><input list="optiontosee" id="newone" placeholder="Select Days"></span>
+                <datalist id="optiontosee"><option value="one day"><option value="two day"><option value="three week"><option value="one week"></datalist>
+            </div>
+            <div id="dateselect">
+                <span>Select Date</span>
+                <span><input type="Date"></span>
+            </div>
+            <div id="gobutton"><button><i class="fa-solid fa-magnifying-glass"></i>Go!</button></div>
+            <div id="apiweather">
+            </div>
         </div>
         <div id="showtemp">
             <span id="tempnumber"></span>
