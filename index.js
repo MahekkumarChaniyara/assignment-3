@@ -89,4 +89,4 @@ function showingtemp(api,city){
     
 }
 
-
+//end
