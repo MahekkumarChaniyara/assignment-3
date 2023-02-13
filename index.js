@@ -7,6 +7,7 @@ var datalist=document.getElementById("citysee");
 var inputcity=document.getElementById("cities");
 var numtemp=document.getElementById("tempnumber");
 var showcity=document.getElementById("showcityname");
+var showcountry=document.getElementById("showcountryname");
 document.getElementById("showdate").innerHTML=now.getDate();
 var arrDay=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 var arrMonth=["January","February","March","April","May","Janu","July","August","September","October","November","December"]
@@ -69,8 +70,11 @@ function mytemp(d){
 
 function showingtemp(api,city){
     fetch(`${api}`).then(res=>res.json()).then(respon=>{
+        console.log(respon);
         numtemp.innerHTML=`${Math.round(respon.main.temp)}&deg`;
+        showcity.innerHTML=city;
+        showcountry.innerHTML=respon.sys.country;
     }).catch(errr=>console.log(errr));
-    showcity.innerHTML=city;
+    
 }
 
