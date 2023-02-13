@@ -63,6 +63,9 @@ function optionadd(arrcityname){
     }
 }
 
+var city="Ahmedabad";
+var api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9a2ecb08a03c4efc56a4050642bd1279`
+showingtemp(api,city);
 
 
 
