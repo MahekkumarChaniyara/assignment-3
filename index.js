@@ -85,14 +85,16 @@ function showingtemp(api,city){
         numtemp.innerHTML=`${Math.round(respon.main.temp)}&deg`;
         showcity.innerHTML=city;
         showcountry.innerHTML=respon.sys.country;
+        console.log(numtemp.innerHTML)
         
-        if(numtemp.innerHTML>30){
-            document.querySelector("img").src="clear.svg";
-        }else if(numtemp.innerHTML>20&&numtemp.innerHTML<30){
-            document.querySelector("img").src="cloud.svg";
-        }else if(numtemp.innerHTML>10&&numtemp.innerHTML<20){
-            document.querySelector("img").src="haze.svg";
+        if(numtemp.innerHTML>=30){
+            document.getElementById("showimg").src="clear.svg";
+        }else if(numtemp.innerHTML>=20&&numtemp.innerHTML<30){
+            document.getElementById("showimg").src="cloud.svg";
+        }else {
+            document.getElementById("showimg").src="haze.svg";
         }
+        console.log(document.getElementById("showimg").src)
     }).catch(errr=>console.log(errr));
     
 }
