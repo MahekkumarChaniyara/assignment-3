@@ -15,6 +15,11 @@
             <span id="showday"></span><br>
             <p><span id="showmonth"></span>,<span id="showyear"></span></p>
         </div>
+        <div id="showcitylist">
+            <lable for="cities">Select Place</lable>
+            <span><input list="citysee" id="cities" placeholder="All Places" onchange=mytemp(this)></span>
+            <datalist id="citysee"></datalist>
+        </div>
         <div id="howday">
             <lable for="newone">How many days?</lable>
             <span><input list="optiontosee" id="newone" placeholder="Select Days"></span>
@@ -26,6 +31,10 @@
         </div>
         <div id="gobutton"><button><i class="fa-solid fa-magnifying-glass"></i>Go!</button></div>
         <div id="apiweather">
+        </div>
+        <div id="showtemp">
+            <span id="tempnumber"></span>
+            <span id="showcityname"></span>
         </div>
     </div>
     <div id="main"></div>

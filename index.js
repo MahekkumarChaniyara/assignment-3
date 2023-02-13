@@ -3,6 +3,10 @@ target.style.display="flex";
 var now=new Date();
 var day=now.getDay();
 var month=now.getMonth();
+var datalist=document.getElementById("citysee");
+var inputcity=document.getElementById("cities");
+var numtemp=document.getElementById("tempnumber");
+var showcity=document.getElementById("showcityname");
 document.getElementById("showdate").innerHTML=now.getDate();
 var arrDay=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 var arrMonth=["January","February","March","April","May","Janu","July","August","September","October","November","December"]
@@ -31,3 +35,42 @@ fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/make-you
 
 
 //<div><div class="totalprice"><span class="price">Total Price:</span><div class="showprice">${x.price}</div></div><button class="exmore">Explore</button></div>
+var citylist=[];
+fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/india-popular-city.json").then(res=>res.json()).then(respod=>{
+    respod.city.forEach(function(z){
+        citylist.push(z.name);
+    })
+    optionadd(citylist);
+}).catch(err=>console.log(err));
+
+
+console.log(citylist);
+
+
+
+
+
+
+function optionadd(arrcityname){
+    for(let i=0;i<arrcityname.length;i++){
+        var datalistchild=`<option value="${arrcityname[i]}"></option>`;
+        datalist.insertAdjacentHTML("beforeend",datalistchild);
+    }
+}
+
+function mytemp(d){
+    var city=d.value;
+    var api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9a2ecb08a03c4efc56a4050642bd1279`
+
+    showingtemp(api,city);
+}
+
+// fetch("https://api.openweathermap.org/data/2.5/weather?q=Rajkot&units=metric&appid=9a2ecb08a03c4efc56a4050642bd1279")
+
+function showingtemp(api,city){
+    fetch(`${api}`).then(res=>res.json()).then(respon=>{
+        numtemp.innerHTML=`${Math.round(respon.main.temp)}&deg`;
+    }).catch(errr=>console.log(errr));
+    showcity.innerHTML=city;
+}
+
