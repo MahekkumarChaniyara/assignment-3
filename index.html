@@ -20,8 +20,7 @@
         <div id="two" style="display:flex">
             <div id="showcitylist" class="header1">
                 <lable for="cities">Select Place</lable>
-                <span><input list="citysee" value="ahmedabad" id="cities" placeholder="All Places"  onchange=mytemp(this)></span>
-                <datalist id="citysee"></datalist>
+                <select id="citysee" onchange=mytemp(this) placeholder="All Places"></select>
             </div>
             <div id="howday" class="header1">
                 <lable for="newone">How many days?</lable>
@@ -32,7 +31,7 @@
                 <span>Select Date</span>
                 <span><input type="Date"></span>
             </div>
-            <div id="gobutton" class="header1"><button><i class="fa-solid fa-magnifying-glass"></i>Go!</button></div>
+            <div id="gobutton"><button><i class="fa-solid fa-magnifying-glass"></i>Go!</button></div>
             <div id="apiweather">
             </div>
         </div>

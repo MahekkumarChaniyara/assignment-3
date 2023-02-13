@@ -51,22 +51,21 @@ fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/india-po
 respod.city.forEach(function(z){
         citylist.push(z.name);
 })
-
+citylist.sort();
 optionadd(citylist);
 }).catch(err=>console.log(err));
 
 
 function optionadd(arrcityname){
     for(let i=0;i<arrcityname.length;i++){
-        var datalistchild=`<option value="${arrcityname[i]}"></option>`;
+        var datalistchild=`<option value="${arrcityname[i]}">${arrcityname[i]}</option>`;
         datalist.insertAdjacentHTML("beforeend",datalistchild);
     }
 }
 
-var city=inputcity.value;
-var api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=9a2ecb08a03c4efc56a4050642bd1279`
 
-showingtemp(api,city);
+
+
 
 function mytemp(d){
     var city=d.value;
@@ -86,6 +85,5 @@ function showingtemp(api,city){
     }).catch(errr=>console.log(errr));
     
 }
-
 
 

@@ -208,28 +208,28 @@ body{
     display:flex;
     flex-direction: column;
     background-color: white;
-    justify-content:center;
-    align-items: center;
+
     margin-right: 0.3%;
     box-shadow: 0px 0px 13px 1px #a8a8a8;
     z-index:1;
     border-radius: 10px 0px 0px 10px;
-    padding: 10px;
+    padding: 11px;
     margin-left: 3%;
+    width:25%;
 }
 
-#showcitylist input{
+#showcitylist select{
     border:0;
     background-color: white;
     text-align: center;
 }
 
-#citysee{
+/* #citysee{
     height: 200px;
 }
 #citysee option{
     height: 200px;
-}
+} */
 
 #showtemp{
     justify-content: center;
