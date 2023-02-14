@@ -81,19 +81,12 @@ function mytemp(d){
 
 function showingtemp(api,city){
     fetch(`${api}`).then(res=>res.json()).then(respon=>{
-        console.log(respon);
+        var imgweather=respon.weather[0].icon;
         numtemp.innerHTML=`${Math.round(respon.main.temp)}&deg`;
         showcity.innerHTML=city;
         showcountry.innerHTML=respon.sys.country;
-        console.log(numtemp.innerHTML)
-        
-        if(numtemp.innerHTML>=30){
-            document.getElementById("showimg").src="clear.svg";
-        }else if(numtemp.innerHTML>=20&&numtemp.innerHTML<30){
-            document.getElementById("showimg").src="cloud.svg";
-        }else {
-            document.getElementById("showimg").src="haze.svg";
-        }
+        console.log(numtemp.innerHTML);
+        document.getElementById("showimg").src=`http://openweathermap.org/img/w/${imgweather}.png`;
         console.log(document.getElementById("showimg").src)
     }).catch(errr=>console.log(errr));
     

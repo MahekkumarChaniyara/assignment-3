@@ -221,7 +221,7 @@ body{
 #showcitylist select{
     border:0;
     background-color: white;
-    text-align: center;
+
 }
 
 /* #citysee{
@@ -235,7 +235,8 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-left: 2%;
+    margin-left: 1%;
+    min-width: 200px;
 }
 #showtemp p{
     display: flex;
